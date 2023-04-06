@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.login,
+.register,
+.forgotPassword {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  min-height: calc(100vh - 4.5rem);
+  margin-top: 4.5rem;
+  overflow: hidden;
+}
+.loginImgDiv,
+.registerImgDiv,
+.forgotPasswordImgDiv {
+  column-span: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.loginImg,
+.registerImg,
+.forgotPasswordImg {
+  width: 100%;
+  height: calc(100vh - 4rem);
+}
+.loginBox,
+.registerBox,
+.forgotPasswordBox {
+  column-span: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.loginForm,
+.registerForm,
+.forgotPasswordForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0.8rem;
+  font-family: "Open Sans";
+  box-shadow: 0.12rem 0.12rem 0.5rem rgba(0, 0, 0, 0.3);
+  width: 65%;
+  padding-bottom: 1rem;
+  background-color: white;
+}
+.loginHead,
+.registerHead,
+.forgotPasswordHead {
+  margin-block: 0rem;
+  font-size: 1rem;
+  padding: 0.8rem 1.55rem;
+  font-weight: 700;
+  font-family: "Open Sans";
+  color: white;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  background-color: #103e70;
+}
+
+.loginForm div,
+.registerForm div,
+.forgotPasswordForm div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1.5rem;
+}
+.loginForm div label,
+.registerForm div label,
+.forgotPasswordForm div label {
+  font-size: 0.9rem;
+  color: rgb(87, 87, 87);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.loginForm div input,
+.registerForm div input,
+.forgotPasswordForm div input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(58, 58, 58, 0.2);
+  border-radius: 0.3rem;
+}
+.loginForm div input:focus,
+.registerForm div input:focus,
+.forgotPasswordForm div input:focus {
+  box-shadow: 0.06rem 0.06rem 0.18rem rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: transparent;
+}
+.forgetBtn {
+  color: #103e70;
+  cursor: pointer;
+  background-color: white;
+  align-self: flex-end;
+  padding: 0.8rem 0rem;
+  margin-right: 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "Open Sans";
+  border: none;
+}
+.submitBtn {
+  cursor: pointer;
+  color: white;
+  background-color: #103e70;
+  align-self: center;
+  width: auto;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.2rem;
+  font-family: "Open Sans";
+}
+.signUpDiv,
+.loginDiv {
+  display: flex;
+  flex-direction: row !important;
+  align-self: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.signUpBtn,
+.loginBtn {
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 0.8rem;
+  color: #103e70;
+}
+.formError {
+  font-size: 0.8em;
+  color: red;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media screen and (max-width: 1100px) {
+  .loginBox,
+  .registerBox {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .login,
+  .register,
+  .forgotPassword {
+    display: flex;
+  }
+  .loginImgDiv,
+  .registerImgDiv,
+  .forgotPasswordImgDiv {
+    display: none;
+  }
+  .loginBox,
+  .registerBox,
+  .forgotPasswordBox {
+    width: 100%;
+    padding: 8rem;
+    background-image: url("../../assets/images/login.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .loginForm,
+  .registerForm,
+  .forgotPasswordForm {
+    opacity: 0.9;
+  }
+}
+@media screen and (max-width: 700px) {
+  .loginBox,
+  .registerBox,
+  .forgotPasswordBox {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .loginBox,
+  .registerBox,
+  .forgotPasswordBox {
+    padding: 1.5rem;
+  }
+  .loginHead,
+  .registerHead,
+  .forgotPasswordHead {
+    padding: 0.4rem 1rem;
+  }
+  .loginForm div,
+  .registerForm div,
+  .forgotPasswordForm div {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  .loginForm div label,
+  .registerForm div label,
+  .forgotPasswordForm div label {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .loginForm div input,
+  .registerForm div input,
+  .forgotPasswordForm div input {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    border: 1px solid rgba(58, 58, 58, 0.2);
+    border-radius: 0.2rem;
+  }
+  .forgetBtn {
+    font-size: 0.6rem;
+    margin: 0.6rem 0.8rem;
+  }
+  .submitBtn {
+    font-size: 0.7rem;
+  }
+  .signUpDiv,
+  .loginDiv {
+    font-size: 0.7rem !important;
+  }
+  .signUpBtn,
+  .loginBtn {
+    margin-left: 0.2rem;
+  }
+  .formError {
+    font-size: 0.4em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .loginBox,
+  .registerBox,
+  .forgotPasswordBox {
+    padding: 0rem;
+  }
+}

@@ -1,0 +1,120 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  width: 100vw;
+  height: 4.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px solid #103e70;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+}
+.navbar-logo img {
+  width: 7rem;
+}
+
+.rightPart {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchBox {
+  border-radius: 0.3rem;
+  border: 2px solid #103e70;
+}
+.searchBox div {
+  border-radius: 0.3rem;
+  border: none;
+}
+.searchBox div div {
+  box-shadow: none;
+  border: none;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 1rem;
+  transition:  all 1s ease-in-out;
+}
+.nav-link {
+  color: #103e70;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.nav-link:hover{
+  border-bottom: 3px solid #103e70;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  list-style: none;
+  background-color: white;
+  box-shadow: 2px 2px 6px rgb(83, 83, 83);
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.dropdown-item:hover {
+  background-color: #3460dc;
+}
+.cartIcon{
+  font-size: 1.4rem;;
+}
+.cartBadge {
+  display: inline-block;
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  font-size: 0.7rem;
+  background-color: red;
+  color: white;
+  padding: 0.1rem 0.33rem;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1100px) {
+  .rightPart {
+    grid-template-columns: 35% 65%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .rightPart {
+    grid-template-columns: 30% 70%;
+  }
+}

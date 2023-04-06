@@ -1,0 +1,45 @@
+.error404{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem 4rem;
+}
+.error404 img{
+    width: 50%;
+}
+.errorDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+@media screen and (max-width:1100px){
+    .error404 img{
+        width: 60%;
+    }
+    .errorDetails{
+        width: 40%;
+    }
+}
+@media screen and (max-width:950px){
+    .error404{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .error404 img{
+        width: 100%;
+    }
+    .errorDetails{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .error404{
+        padding: 2rem 0rem;
+    }
+    .errorDetails{
+        padding: 2rem;
+    }
+    
+}

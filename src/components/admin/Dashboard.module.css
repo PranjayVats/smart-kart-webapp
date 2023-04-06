@@ -1,0 +1,58 @@
+.dashboardPage {
+  display: flex;
+  margin-top: 4.5rem;
+
+  min-height: calc(100vh - 4.5rem);
+}
+.sidebar {
+  display: flex;
+  height: 60vh;
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sidebar li{
+  cursor: pointer;
+}
+.sidebar li:hover{
+  color: rgb(138, 71, 255);
+}
+details ul {
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  padding: 0.2rem 0rem;
+}
+details ul li{
+  color: black;
+  cursor: pointer;
+}
+details ul li:hover{
+  color: rgb(26, 70, 97);
+}
+.mainDashboard {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.mainDashboard ul {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+}
+.mainDashboard ul li {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 187, 71);
+  color: white;
+  border-radius: 50%;
+}
+
+.chart {
+  width: 100%;
+  height: 80vh;
+}

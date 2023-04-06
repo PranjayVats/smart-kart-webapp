@@ -1,0 +1,155 @@
+.productsPage {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0rem;
+  margin-top: 4.5rem;
+  
+  background-color: rgb(243, 243, 243);
+  min-height: calc(100vh - 4.5rem);
+}
+.productsFilter {
+  display: flex;
+  border-radius: 0.8rem;
+  background-color: white;
+  flex-direction: column;
+  width: 20%;
+  padding: 0.4rem;
+}
+.productsFilter hr {
+  width: 100%;
+  margin-block: 0;
+}
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filterIcon {
+  font-size: 2rem;
+}
+.priceFilter,
+.ratingFilter,
+.categoryFilter {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+}
+.priceRange {
+  padding: 0.5rem 0rem;
+}
+.productsFilter h3 {
+  margin-block: 0;
+  color: rgb(58, 58, 58);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.ratingFilter div {
+  display: flex;
+  color: #103e70;
+  cursor: pointer;
+  padding-top: 0.5rem;
+}
+.categorySelect {
+  padding: 0.5rem 0rem;
+}
+.rateStars {
+  font-size: 1.4rem;
+}
+.filterBtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.filterBtn button {
+  border: none;
+  font-family: Georgia, "Times New Roman", Times, serif, "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 1.1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.2rem;
+  background-color: #103e70;
+  color: white;
+  transition: all 0.1s;
+}
+.applyFilterBtn:hover {
+  transform: scale(1.1);
+}
+/* Product Container */
+.productsContainer {
+  
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  background-color: white;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.productsContainer h1 {
+  text-align: center;
+}
+.productsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.productCard {
+  
+  display: flex;
+  position: relative;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.productImage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.productImage img {
+  width: 100%;
+  aspect-ratio: 6/5;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background: #103e70;
+  color: white;
+  transition: all linear 0.5s;
+  padding: 2rem 1rem;
+}
+
+.overlay:hover {
+  opacity: 0.75;
+}
+
+.noProduct {
+  
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  margin: 0;
+  padding-inline: 0;
+  padding: 2rem;
+  background-color: white;
+  justify-content: space-evenly;
+  width: 70%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.noProduct img {
+  width: 50%;
+}
+.noProduct figcaption {
+  font-size: 1.4rem;
+  color: #103e70;
+}

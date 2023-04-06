@@ -1,0 +1,168 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  
+  background-color: white;
+  min-height: calc(100vh - 4.5rem);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.cartItems {
+  display: flex;
+  margin: 2rem 3rem;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.cartHead {
+  display: grid;
+  color: white;
+  background-color: #103E70;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  margin-block: 0;
+  padding-inline: 0;
+  padding: 0.5rem 1rem;
+}
+.cartHead li {
+  display: flex;
+  padding: 0.7rem 1rem;
+  justify-content: center;
+}
+.cartItem {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 2px solid rgb(52, 56, 185);
+}
+.cartItem h3 {
+  text-align: center;
+  align-self: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-block: 0;
+  padding-inline: 0;
+}
+.cartItemDetails {
+  display: flex;
+  margin-block: 0;
+  padding-inline: 0;
+  margin-inline: 0;
+  /* font-size: 1.2rem; */
+  align-items: center;
+}
+.cartItemDetails figcaption {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.cartItemDetails figcaption h3 {
+  align-self: flex-start;
+  margin-block: 0;
+  padding-inline: 0;
+}
+.cartItemDetails figcaption p {
+  margin-block: 0;
+  padding-inline: 0;
+}
+.cartItemDetails img {
+  height: 8rem;
+  aspect-ratio: 6/5;
+}
+.changeQuantity {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid #103E70;
+  border-radius: 0.2rem;
+}
+.removeItem{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.2rem;
+  background-color:  #103E70;
+}
+.changeQuantity p {
+  margin-block: 0;
+  padding-inline: 0;
+  /* font-size: 1.1rem; */
+  padding: 0.4rem 0.7rem;
+}
+.changeQuantity button {
+  border: none;
+  /* font-size: 1.1rem; */
+  padding: 0.2rem 0.6rem;
+  color: white;
+  background-color: #103E70;
+}
+.cartItem > p {
+  margin-block: 0;
+  padding-inline: 0;
+  /* font-size: 1.1rem; */
+  align-self: center;
+  justify-self: center;
+}
+.subtotal,.checkOutBtn{
+  display: flex;
+  padding: 1rem 5.5rem;
+  /* font-size: 1.2rem; */
+  color: #555555;
+  justify-content: flex-end;
+}
+.checkOutBtn a{
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.2rem;
+  background-color: #103E70;
+  color: white;
+  transition: all 0.1s;
+}
+.checkOutBtn a:hover {
+  transform: scale(1.1);
+}
+
+.emptyCart {
+  display: flex;
+  height: 100%;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #da4453;
+}
+.emptyCart div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.emptyCartImg {
+  width: 60%;
+}
+.continueBtn {
+  border: none;
+  margin-top: 1rem;
+  width: auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.2rem;
+  background-color: #103E70;
+  color: white;
+  transition: all 0.1s;
+}
+.continueBtn:hover {
+  transform: scale(1.1);
+}

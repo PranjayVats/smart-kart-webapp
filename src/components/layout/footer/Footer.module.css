@@ -1,0 +1,85 @@
+.footer {
+  bottom: 0;
+  left: 0;
+  
+  padding: 1rem 2rem;
+  background-color: #1e2936;
+  color: white;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.leftFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter figure {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+  font-family: "Roboto";
+  border-right: 1px solid white;
+}
+
+.leftFooter figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.leftFooter figure figcaption p {
+  font-family: Arial, Helvetica, sans-serif, "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.leftFooter img {
+  width: 20%;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.rightFooter {
+  display: flex;
+}
+
+.usefulLinks {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.usefulLinks a {
+  color: white;
+}
+.connectWithUs {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.rightFooter div h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+.connectWithUs a {
+  width: 2rem;
+}
+.connectWithUs img {
+  width: 100%;
+  background-color: white;
+  padding: 0.1rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.connectWithUs img:hover {
+  transform: scale(1.1);
+}

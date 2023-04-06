@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+.product {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  background-color: white;
+}
+.detailsCaraosel {
+  width: 100%;
+  display: flex;
+  /* height: calc(100vh - 4.5rem); */
+}
+.productDetails {
+  width: 55%;
+  padding: 1rem 3rem;
+  color: rgba(71, 71, 71);
+}
+.caraosels {
+  display: flex;
+  justify-content: center;
+  
+  padding: 0rem 2rem;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  /* height: calc(100vh - 4.5rem); */
+  /* justify-content: space-evenly; */
+  width: 45%;
+}
+.caraosel1 {
+  display: flex !important;
+}
+.caraosel1figure{
+  display: flex;
+  justify-content: center;
+}
+.caraosel1image {
+  aspect-ratio: 6/5;
+  width: 75% !important;
+  box-shadow: 0 4px 2px -2px rgba(71, 71, 71, 0.4);
+}
+
+.caraosel1title {
+  font-size: large !important;
+  font-weight: 700;
+  color: gray;
+  text-align: center;
+}
+.caraosel2 img {
+  /* box-shadow: 1px 1px 3px rgba(71, 71, 71, 0.4); */
+  border: 1px solid #909090;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  aspect-ratio: 1/1 !important;
+  width: 4rem !important;
+}
+.caraosel2 > div > div:nth-last-child(-n + 2) {
+  color: #103e70 !important;
+  padding: 0.3rem !important;
+  --swiper-navigation-size: 1.5rem;
+  font-weight: 700;
+  background-color: white;
+}
+.caraosel2 > div > div:nth-child(2) {
+  left: 0px;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+.caraosel2 > div > div:nth-child(3) {
+  right: 0px;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.productName {
+  font-family: "Open Sans";
+  color: #103270;
+}
+.productPrice {
+  font-size: 0.9rem;
+}
+.productPrice p {
+  color: #4f4f4f;
+  font-size: 1.4rem;
+}
+.productFeatures h3 {
+  color: #103E70;
+}
+.productFeatures ul {
+  color: rgb(71, 71, 71);
+  text-align: justify;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.productReviews {
+  padding: 2rem;
+}
+.addToCartBtn {
+  border: none;
+  font-family: Georgia, "Times New Roman", Times, serif, "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.2rem;
+  background-color: #103E70;
+  color: white;
+  transition: all 0.1s;
+}
+.addToCartBtn:hover{
+  transform: scale(1.1);
+}
