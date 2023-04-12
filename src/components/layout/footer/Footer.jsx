@@ -12,7 +12,7 @@ function Footer() {
         <figure>
           <img src={Logo} alt="" />
           <figcaption>
-            <h2>SMART-KART</h2>
+            <h3>SMART-KART</h3>
             <p>A SMART & SECURE WAY OF E-SHOPPING</p>
             <p>Copyright 2023 &copy; ZealousCoders</p>
           </figcaption>

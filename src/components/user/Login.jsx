@@ -43,54 +43,40 @@ function Login() {
   }, [navigate, login]);
 
   return (
-    <div className={styles.login}>
-      <div className={styles.loginImgDiv}>
-        <img src={LoginImg} className={styles.loginImg} loading="lazy" alt="" />
+    <form className={styles.loginForm}>
+      <div>
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+        {errors.email && touched.email ? (
+          <span className={styles.formError}>{errors.email}</span>
+        ) : null}
       </div>
-      <div className={styles.loginBox}>
-        <form className={styles.loginForm}>
-          <p className={styles.loginHead}>Login</p>
-          <div>
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            {errors.email && touched.email ? (
-              <span className={styles.formError}>{errors.email}</span>
-            ) : null}
-          </div>
-          <div>
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              value={values.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            {errors.password && touched.password ? (
-              <span className={styles.formError}>{errors.password}</span>
-            ) : null}
-          </div>
-          <Link to="/forgotPassword" className={styles.forgetBtn}>
-            Forget Password
-          </Link>
-          <button className={styles.submitBtn} onClick={handleSubmit}>
-            Submit
-          </button>
-          <div className={styles.signUpDiv}>
-            <span>Don't have an account yet?</span>
-            <Link to="/register" className={styles.signUpBtn}>
-              SignUp
-            </Link>{" "}
-          </div>
-        </form>
+      <div>
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          value={values.password}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+        {errors.password && touched.password ? (
+          <span className={styles.formError}>{errors.password}</span>
+        ) : null}
       </div>
-    </div>
+      <Link to="/forgotPassword" className={styles.forgetBtn}>
+        Forget Password
+      </Link>
+      <button className={styles.submitBtn} onClick={handleSubmit}>
+        Login
+      </button>
+    </form>
   );
 }
 

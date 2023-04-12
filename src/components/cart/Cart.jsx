@@ -36,7 +36,7 @@ function Cart() {
           {cartItems &&
             cartItems.map((i, idx) => (
               <div className={styles.cartItem} key={idx}>
-                <h3>{idx + 1}</h3>
+                <h4>{idx + 1}</h4>
                 <figure className={styles.cartItemDetails}>
                   <img src={i.image} alt="" />
                   <figcaption>
@@ -45,7 +45,7 @@ function Cart() {
                     <p>Price: ₹{i.price}</p>
                   </figcaption>
                 </figure>
-                <span className={styles.changeQuantity}>
+                <div className={styles.changeQuantity}>
                   <button
                     onClick={() =>
                       dispatch(updateCart({ operation: "decrement", id: i.id }))
@@ -61,23 +61,23 @@ function Cart() {
                   >
                     +
                   </button>
-                </span>
-                <span
+                </div>
+                <div
                   className={styles.removeItem}
                   onClick={() => {
                     dispatch(removeFromCart({ id: i.id }));
                   }}
                 >
-                  Remove Item&nbsp;
+                  <p>Delete</p>
                   <RiDeleteBin6Line />
-                </span>
+                </div>
                 <p>
-                  <strong>₹ {i.price * i.cartQuantity}</strong>
+                  <strong>₹&nbsp;{i.price * i.cartQuantity}</strong>
                 </p>
               </div>
             ))}
           <div className={styles.subtotal}>
-            <strong>Total Amount:&nbsp;&nbsp;₹ {cartAmount}</strong>
+            <strong>Total Amount:  ₹&nbsp;{cartAmount}</strong>
           </div>
           <div className={styles.checkOutBtn}>
             <Link to="/shippingDetails">CHECK OUT</Link>

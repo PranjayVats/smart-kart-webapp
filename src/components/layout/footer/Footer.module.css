@@ -1,8 +1,8 @@
 .footer {
   bottom: 0;
   left: 0;
-  
-  padding: 1rem 2rem;
+  position: relative;
+  padding: 1.5rem 2rem;
   background-color: #1e2936;
   color: white;
   display: grid;
@@ -10,76 +10,120 @@
   gap: 1rem;
   align-items: center;
 }
-
 .leftFooter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
-
 .leftFooter figure {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
   justify-content: space-evenly;
   font-family: "Roboto";
   border-right: 1px solid white;
 }
-
 .leftFooter figure figcaption {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+.leftFooter figure figcaption h3 {
+  font-size: 1.1rem;
+}
 .leftFooter figure figcaption p {
-  font-family: Arial, Helvetica, sans-serif, "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 0.5rem;
+  font-family: "Courier New";
+  font-weight: 600;
 }
 .leftFooter img {
-  width: 20%;
+  width: 15%;
   cursor: pointer;
   background-color: white;
   border-radius: 50%;
   padding: 0.2rem;
 }
-
 .rightFooter {
   display: flex;
+  text-align: center;
+  justify-content: space-between;
 }
-
 .usefulLinks {
-  width: 50%;
+  width: 100%;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   color: white;
 }
 .usefulLinks a {
   color: white;
 }
 .connectWithUs {
-  width: 50%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .rightFooter div h3 {
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.2rem;
+  margin-bottom: 1rem;
 }
 .connectWithUs a {
   width: 2rem;
 }
-.connectWithUs img {
+.connectWithUs a img {
   width: 100%;
   background-color: white;
   padding: 0.1rem;
   border-radius: 50%;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 .connectWithUs img:hover {
   transform: scale(1.1);
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .leftFooter figure {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  .leftFooter figure figcaption h3 {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftFooter {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .leftFooter figure {
+    flex-direction: row;
+    border-right: none;
+    margin-bottom: 2rem;
+  }
+  .rightFooter {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .leftFooter figure {
+    flex-direction: column;
+  }
+  .leftFooter img {
+    width: 25%;
+  }
 }

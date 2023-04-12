@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Dashboard.module.css";
 import { FiChevronDown } from "react-icons/fi";
 
 function Sidebar() {
+  const [openProduct, setOpenProduct] = useState(false);
   return (
     <ul className={styles.sidebar}>
       <li>Dashboard</li>
-      <li>
-        <details>
-          <summary>Products&nbsp;<FiChevronDown/></summary>
+      <li className={styles.product} >
+        <span onClick={() => setOpenProduct(!openProduct)}>
+          Products&nbsp;
+          <FiChevronDown />
+        </span>
+        {openProduct ? (
           <ul>
             <li>All</li>
             <li>Create</li>
           </ul>
-        </details>
+        ) : (
+          <></>
+        )}
       </li>
       <li>Orders</li>
       <li>Users</li>

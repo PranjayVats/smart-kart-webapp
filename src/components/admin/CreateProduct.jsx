@@ -2,21 +2,19 @@ import React, { useEffect, useState } from "react";
 import RegisterImg from "../../assets/images/login.webp";
 import { toast } from "react-toastify";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import styles from "./User.module.css";
+import styles from "./CreateProduct.module.css";
 import { useFormik } from "formik";
-import { registerSchema } from "../../assets/data/schema";
-import { addUser } from "../../store/slices/UserSlice";
-import { useDispatch } from "react-redux";
+import { createProductSchema} from "../../assets/data/schema";
 
 const initialValues = {
   name: "",
-  email: "",
-  password: "",
-  confirm_password: "",
+  price: 0,
+  description: "",
+  category: "Shoes",
+  file:undefined
 };
-function Register() {
-  const dispatch = useDispatch();
-  const toastifySuccess = () => {
+
+function CreateProduct() {const toastifySuccess = () => {
     toast.success("Registered Successfully", {
       position: "top-center",
       autoClose: 1500,
@@ -29,9 +27,8 @@ function Register() {
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
-      validationSchema: registerSchema,
+      validationSchema: createProductSchema,
       onSubmit: (values, action) => {
-        dispatch(addUser(values));
         action.resetForm();
         toastifySuccess();
         setRegister(true);
@@ -40,16 +37,13 @@ function Register() {
 
   const [register, setRegister] = useState(false);
   const navigate = useNavigate();
-  useEffect(() => {
-    if (register) return navigate("/");
-  }, [navigate, register]);
-
+  
   return (
     <form className={styles.registerForm} onSubmit={handleSubmit}>
       <div>
         <label>Name</label>
         <input
-          type="name"
+          type="text"
           name="name"
           placeholder="Name"
           value={values.name}
@@ -61,43 +55,56 @@ function Register() {
         ) : null}
       </div>
       <div>
-        <label>Email</label>
+        <label>Price</label>
         <input
-          type="email"
-          name="email"
+          type="number"
+          name="price"
           placeholder="xyz@gmail.com"
-          value={values.email}
+          value={values.price}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.email && touched.email ? (
-          <span className={styles.formError}>{errors.email}</span>
+        {errors.price && touched.price ? (
+          <span className={styles.formError}>{errors.price}</span>
         ) : null}
       </div>
       <div>
-        <label>Password</label>
+        <label>Description</label>
         <input
-          type="password"
-          name="password"
-          value={values.password}
+          type="text"
+          name="description"
+          value={values.description}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.password && touched.password ? (
-          <span className={styles.formError}>{errors.password}</span>
+        {errors.description && touched.description ? (
+          <span className={styles.formError}>{errors.description}</span>
         ) : null}
       </div>
       <div>
-        <label>Confirm Password</label>
+        <label>Category</label>
         <input
-          type="password"
-          name="confirm_password"
-          value={values.confirm_password}
+          type="text"
+          name="category"
+          value={values.category}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.confirm_password && touched.confirm_password ? (
-          <span className={styles.formError}>{errors.confirm_password}</span>
+        {errors.category && touched.category ? (
+          <span className={styles.formError}>{errors.category}</span>
+        ) : null}
+      </div>
+      <div>
+        <label>Upload Images</label>
+        <input
+          type="file"
+          name="file"
+          value={values.file}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+        {errors.file && touched.file ? (
+          <span className={styles.formError}>{errors.file}</span>
         ) : null}
       </div>
       <button type="submit" className={styles.submitBtn}>
@@ -107,4 +114,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default CreateProduct;

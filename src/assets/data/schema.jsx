@@ -1,5 +1,6 @@
 import * as Yup from "yup";
-
+const CATEGORIES = ["Electronics", "Shoes", "Attire", "Clothes"];
+const SUPPORTED_FORMATS = ["jpg", "image/jpeg", "image/gif", "image/png"];
 export const loginSchema = Yup.object({
   email: Yup.string().email().required("Please enter your email"),
   password: Yup.string().min(6).required("Please enter your password"),
@@ -34,4 +35,21 @@ export const shippingSchema = Yup.object({
     .required("Please enter your pin code"),
   state: Yup.string().min(3).max(20).required("Please enter your state"),
   country: Yup.string().min(3).max(20).required("Please enter your country"),
+});
+
+export const createProductSchema = Yup.object().shape({
+  name: Yup.string().min(2).max(25).required("Please provide product name"),
+  price: Yup.number().required("Please provide product price"),
+  description: Yup.string()
+    .min(10)
+    .required("Please provide product description"),
+  category: Yup.string().required("Please provide product category"),
+  file: Yup
+    .mixed()
+    .required("A file is required")
+    .test(
+      "fileFormat",
+      "Unsupported Format",
+      (value) => value && SUPPORTED_FORMATS.includes(value.type)
+    ),
 });

@@ -11,6 +11,9 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "./store/slices/ProductSlice";
 import Loading from "./components/layout/loading/Loading";
 import Error404 from "./components/layout/error404/error404";
+import LoginRegister from "./components/user/LoginRegister";
+import Filter from "./components/product/Filter";
+import CreateProduct from "./components/admin/CreateProduct";
 const Footer = lazy(() => import("./components/layout/footer/Footer"));
 const Login = lazy(() => import("./components/user/Login"));
 const Register = lazy(() => import("./components/user/Register"));
@@ -47,24 +50,12 @@ function App() {
             }
           ></Route>
           <Route
-            path="/login"
+            path="/login-register"
             element={
               <Suspense fallback={<Loading />}>
                 <>
                   <Navbar />
-                  <Login />
-                  <Footer />
-                </>
-              </Suspense>
-            }
-          ></Route>
-          <Route
-            path="/register"
-            element={
-              <Suspense fallback={<Loading />}>
-                <>
-                  <Navbar />
-                  <Register />
+                  <LoginRegister />
                   <Footer />
                 </>
               </Suspense>
@@ -161,6 +152,18 @@ function App() {
                 <>
                   <Navbar />
                   <Dashboard />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          ></Route>
+          <Route
+            path="/admin/createProduct"
+            element={
+              <Suspense fallback={<Loading />}>
+                <>
+                  <Navbar />
+                  <CreateProduct />
                   <Footer />
                 </>
               </Suspense>

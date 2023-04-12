@@ -65,14 +65,12 @@ function Product() {
                   {product &&
                     product.url.map((i, idx) => (
                       <SwiperSlide key={idx}>
-                        <figure className={styles.caraosel1figure}>
-                          <img
-                            src={i}
-                            className={styles.caraosel1image}
-                            alt=""
-                            loading="lazy"
-                          />
-                        </figure>
+                        <img
+                          src={i}
+                          className={styles.caraosel1image}
+                          alt=""
+                          loading="lazy"
+                        />
                       </SwiperSlide>
                     ))}
                 </Swiper>

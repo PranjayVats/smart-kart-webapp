@@ -1,5 +1,6 @@
 #range-slider-yellow {
   height: 0.3rem;
+  z-index: 1;
 }
   #range-slider-yellow .range-slider__range {
     background: #165292;

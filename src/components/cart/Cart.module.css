@@ -1,24 +1,20 @@
 .cart {
   display: flex;
   flex-direction: column;
-  margin-top: 4.5rem;
-  
   background-color: white;
   min-height: calc(100vh - 4.5rem);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
-    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Gill Sans";
+  padding: 2rem 3rem;
 }
 .cartItems {
   display: flex;
-  margin: 2rem 3rem;
   flex-direction: column;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .cartHead {
   display: grid;
   color: white;
-  background-color: #103E70;
+  background-color: #103e70;
   grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
   margin-block: 0;
   padding-inline: 0;
@@ -35,28 +31,29 @@
   padding: 1rem;
   border-bottom: 2px solid rgb(52, 56, 185);
 }
-.cartItem h3 {
+.cartItem h4 {
   text-align: center;
   align-self: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-block: 0;
   padding-inline: 0;
+  margin: 0.7rem 1rem;
 }
 .cartItemDetails {
   display: flex;
   margin-block: 0;
   padding-inline: 0;
   margin-inline: 0;
-  /* font-size: 1.2rem; */
+  justify-content: space-evenly;
   align-items: center;
+  margin: 0.7rem 1rem;
 }
 .cartItemDetails figcaption {
   display: flex;
+  width: 50%;
   flex-direction: column;
-  margin-left: 1rem;
 }
 .cartItemDetails figcaption h3 {
-  align-self: flex-start;
   margin-block: 0;
   padding-inline: 0;
 }
@@ -65,104 +62,193 @@
   padding-inline: 0;
 }
 .cartItemDetails img {
-  height: 8rem;
+  width: 50%;
   aspect-ratio: 6/5;
 }
 .changeQuantity {
   display: flex;
   align-self: center;
   justify-self: center;
-  border: 2px solid #103E70;
+  border: 2px solid #103e70;
   border-radius: 0.2rem;
+  margin: 0.7rem 1rem;
 }
-.removeItem{
+.changeQuantity > p {
+  margin-block: 0;
+  padding-inline: 0;
+  padding: 0.4rem 0.7rem;
+}
+.changeQuantity button {
+  border: none;
+  padding: 0.2rem 0.6rem;
+  color: white;
+  background-color: #103e70;
+}
+.removeItem {
   display: flex;
   align-self: center;
   justify-self: center;
   align-items: center;
   justify-content: space-between;
   color: white;
+  cursor: pointer;
   padding: 0.6rem 1rem;
   border-radius: 0.2rem;
-  background-color:  #103E70;
-}
-.changeQuantity p {
-  margin-block: 0;
-  padding-inline: 0;
-  /* font-size: 1.1rem; */
-  padding: 0.4rem 0.7rem;
-}
-.changeQuantity button {
-  border: none;
-  /* font-size: 1.1rem; */
-  padding: 0.2rem 0.6rem;
-  color: white;
-  background-color: #103E70;
+  background-color: #103e70;
+  margin: 0.7rem 1rem;
 }
 .cartItem > p {
   margin-block: 0;
   padding-inline: 0;
-  /* font-size: 1.1rem; */
   align-self: center;
   justify-self: center;
+  margin: 0.7rem 1rem;
 }
-.subtotal,.checkOutBtn{
+.subtotal,
+.checkOutBtn {
   display: flex;
   padding: 1rem 5.5rem;
-  /* font-size: 1.2rem; */
   color: #555555;
   justify-content: flex-end;
 }
-.checkOutBtn a{
+.checkOutBtn a {
   border: none;
   font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   padding: 0.6rem 0.8rem;
   border-radius: 0.2rem;
-  background-color: #103E70;
+  background-color: #103e70;
   color: white;
   transition: all 0.1s;
 }
 .checkOutBtn a:hover {
   transform: scale(1.1);
 }
-
 .emptyCart {
   display: flex;
-  height: 100%;
-  
+  height: 100vh;
+  padding: 3rem 2rem;
+  text-align: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
-    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #da4453;
+  font-family: "Gill Sans";
+  color: #103e70;
 }
 .emptyCart div {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.emptyCartImg {
-  width: 60%;
+.emptyCartImg img {
+  width: 70%;
 }
 .continueBtn {
   border: none;
   margin-top: 1rem;
   width: auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
-    "Times New Roman", Times, serif, "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Gill Sans";
   font-weight: 500;
   cursor: pointer;
   padding: 0.6rem 0.8rem;
   border-radius: 0.2rem;
-  background-color: #103E70;
+  background-color: #103e70;
   color: white;
   transition: all 0.1s;
 }
 .continueBtn:hover {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+  .cart {
+    padding: 2rem 1rem;
+  }
+  .cartHead {
+    padding: 0.5rem;
+    grid-template-columns: 0.3fr 2.2fr 0.8fr 1fr 0.8fr;
+  }
+  .cartItem {
+    padding: 0.5rem;
+    grid-template-columns: 0.3fr 2.2fr 0.8fr 1fr 0.8fr;
+  }
+  .cartItemDetails img {
+    width: 40%;
+  }
+  .changeQuantity > p {
+    padding: 0.2rem 0.4rem;
+  }
+  .changeQuantity button {
+    padding: 0.2rem 0.5rem;
+  }
+  .removeItem {
+    padding: 0.3rem 0.7rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cartHead {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    grid-template-columns: 0.5fr 1.5fr 0.8fr 1fr 0.8fr;
+  }
+  .cartItem {
+    padding: 0.5rem;
+    grid-template-columns: 0.5fr 1.5fr 0.8fr 1fr 0.8fr;
+  }
+  .cartItemDetails {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .cartItemDetails figcaption {
+    width: 100%;
+  }
+  .removeItem {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .changeQuantity {
+    flex-direction: column;
+  }
+  .cartHead li {
+    padding: 0.4rem 0.6rem;
+  }
+  .cartItemDetails {
+    font-size: 0.9rem;
+    margin: 0.4rem 0.6rem;
+  }
+  .cartItemDetails img {
+    width: 60%;
+  }
+  .changeQuantity {
+    margin: 0.4rem 0.6rem;
+  }
+  .cartItem > h4 {
+    margin: 0.4rem 0.6rem;
+  }
+  .cartItem > p {
+    margin: 0.4rem 0.6rem;
+  }
+  .removeItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+    margin: 0.4rem 0.6rem;
+  }
+  .emptyCartImg img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cartHead {
+    overflow-x: scroll;
+  }
+  .cartItem {
+    overflow-x: scroll;
+  }
+  .cartItemDetails img {
+    width: 80%;
+  }
 }
